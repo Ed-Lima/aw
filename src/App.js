@@ -6,11 +6,7 @@ import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <main>
-      <Switch>
-        <Route path="/" component={Home} exact />
-      </Switch>
-    </main>
+    <Home />
   )
 }
 export default App;
