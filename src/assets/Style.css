@@ -1,0 +1,278 @@
+/* fontes  */
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url('Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: Montserrat-Thin;
+  src: url('Montserrat-Thin.ttf');
+}
+@font-face {
+  font-family: Montserrat-Light;
+  src: url('Montserrat-Light.ttf');
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('Montserrat-Bold.ttf');
+}
+
+h1 {
+  font-family: Montserrat-Bold;
+  color: #707070;
+}
+h4 {
+  font-family: Montserrat-Thin;
+  color: #707070;
+}
+h3 {
+  font-family: Montserrat-Bold;
+  color: #4D4F5C;
+
+}
+#title {
+  text-align: center;
+  font-family: Montserrat-Bold;
+  color: #172B4D;
+  margin-bottom: 9%;
+}
+.white_paragraph{
+  color: white;
+}
+.p_sidebar {
+  font-style: oblique;
+  color: #FFFFFF80;
+}
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+li{
+  font-family: Montserrat-Thin;
+  color: #FFFFFF80;
+  font-size: 14px;
+  margin-bottom: 15%;
+  text-align: center;
+}
+hr{
+  width: 40%;
+  margin-bottom: 25%;
+  margin-top: 25%;
+  height: 1px;
+  border: none;
+  height: 1px;
+  color: #333;
+  background-color: #333;
+}
+
+#home_icon {
+  width: 25px;
+  height: 25px;
+}
+
+
+/* estruturas */
+.main{
+  display: flex;
+  width: 100%;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.sidebar {
+  width: 20%;
+  border-radius: 0 34px 34px 0;
+  display: flex;
+  justify-content: center;
+  background:url('./../assets/img/imagem2.png');
+}
+.layer {
+  background-color: #9F270EF2;
+  opacity: 0.9;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 34px 34px 0;
+}
+.minisidebar {
+  width: 7%;
+  border-radius: 0 34px 34px 0;
+  display: flex;
+  justify-content: center;
+  background:url('./../assets/img/imagem2.png');
+}
+.conteudo{
+  width: 80%;
+}
+
+
+
+
+/* componentes */
+.icons {
+  padding-left: 50%;
+}
+#span_sub {
+  font-size: 10px;
+  color: #BCBDC3;
+}
+#span_titulo {
+  font-size: 15px;
+  font-family: Montserrat-Bold;
+  color: #8288AC;
+}
+.atalhos {
+  box-shadow: 0px 2px 5px #0000000D;
+  display: flex;
+  margin: 3%;
+  padding-left: 10%;
+  padding-top: 3%;
+  border-radius: 50px;
+  height: 8vh;
+}
+.logo_ccr {
+  display: flex;
+}
+.logo {
+  margin-top: 30%;
+  margin-bottom: 10%;
+}
+.input {
+  border-radius: 14px;
+  box-shadow: 0px 2px 5px #0000000D;
+  border: 1px solid #ECECEC;
+  margin-bottom: 2%;
+  height: 6vh;
+  width: 100%;
+}
+
+#customers {
+  font-family: Montserrat-Regular;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td{
+  padding: 8px;
+  font-size: 12px;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 8vh;
+}
+
+#customers tr:nth-child(even){
+  background-color: #F7FAFC;
+  height: 8vh;
+}
+#customers tr:nth-child(odd){
+}
+#customers thead {
+  font-size: 11px;
+  background-color: #F1F3F9;
+  color: #8898AA;
+}
+th {
+  height: 5vh;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#table {
+  width: 100%;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/* pages */
+.left {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+.tabela {
+  border-radius: 10px;
+  width: 60%;
+  box-shadow: -2px 2px 15px #2C282826;
+  display: flex;
+  justify-content: center;
+}
+::placeholder {
+  color: #172B4D;
+  padding-left: 5%;
+}
+
+
+/* buttons */
+.btn {
+  border-radius: 50px;
+  background-color: #68B880;
+  color: white;
+  width: 30%;
+  height: 5vh;
+  letter-spacing: 1.2px;
+  margin-top: 5%;
+  margin-right: 4%;
+  font-size: 10px;
+  box-shadow: 0px 3px 6px #2C28281C;
+  font-family: Montserrat-Bold;
+  opacity: 1;
+}
+.limpar {
+  background-color: white;
+  color: #F53C56;
+  border: 1px solid #F53C56;
+}
+.add {
+  border: none;
+}
+.btn_div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#status {
+  height: 1.3vh;
+  width: 18%;
+  border-radius: 50%;
+}
+#input_table {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+#input_search {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #0000001C;
+  border: 1px solid #D8D8D8;
+  border-radius: 50px;
+  width: 50%;
+  height: 5vh;
+}
+#input_search::placeholder {
+  color: #8288AC;
+}
+#btn_search {
+  border-radius: 50px;
+  background-color: #68B880;
+  color: white;
+  width: 25%;
+  height: 5vh;
+  letter-spacing: 1.2px;
+  font-size: 10px;
+  box-shadow: 0px 3px 6px #2C28281C;
+  font-family: Montserrat-Bold;
+  opacity: 1;
+  background-color: white;
+  color: #172B4D;
+  border: 1px solid #172B4D;
+}
