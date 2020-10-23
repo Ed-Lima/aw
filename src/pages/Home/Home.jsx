@@ -1,19 +1,44 @@
 import React from 'react';
 import './Home.css'
+import loading from '../../load.gif'
+import ReactDOM from 'react-dom';
 import Result from '../../components/Result'
+import axios from 'axios'
+import ReactHtmlParser from 'react-html-parser'; 
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      text: ''
+      text: '',
+      loading: false,
+      result: ''
     }
   }
 
+  setResult = (apiRes) => {
+    let result = this.state.text
+    apiRes[1].forEach(element => {
+      result = result.replaceAll(`${element}`, `<span>${element}</span>`)
+    });
+    this.setState({result})
+  }
+
   onChangeText = (text) => {
-    text = 'a'
     this.setState({text})
-    console.log(this.state.text)
+  }
+
+  handleClick = () => {
+    this.setState({loading: true})
+    const data = {
+      text: this.state.text
+    }
+    axios.post(`https://opendatasciencelab.jnj.com:443/models/5f79f9cb7e0167595f257091/latest/model`, {data})
+      .then(res => {
+        const result = res.data.result;
+        this.setResult(result)
+        this.setState({loading: false})
+      })
   }
 
   render(){
@@ -22,12 +47,19 @@ class Login extends React.Component {
         <span className="title">Augmented Writing</span>
         <div className="form">
             <div className="input-container">
-              <p className="input-label noselect">Enter text</p>
-              <div onInput={(e) => this.onChangeText(e.target.innerHTML)}
-                   type="text" 
-                   contentEditable="true"
-                   className="input">
-                Some text here to display the information which <Result value={"is applicable to"}></Result> the test of action verbs, please <Result value={"give consideration"}></Result> that this is only a test.
+              <textarea 
+                onChange={(e) => this.onChangeText(e.target.value)}
+                className="input"
+                id="text">
+              </textarea>
+              { this.state.loading ?
+                <div className="btn-primary"><img width="20px" src={loading} alt="loading..." /></div>
+                :
+                <button className="btn-primary" onClick={this.handleClick}>Check</button>
+              }
+              
+              <div className="input result" disabled>
+                { ReactHtmlParser (this.state.result) }
               </div>
             </div>
         </div>

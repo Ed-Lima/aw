@@ -19,7 +19,6 @@ class Result extends React.Component {
   render(){
     return(
       <>
-        {this.state.isHovering && <div class="tip">Applies to</div>}
         <div  contentEditable="false"
               className="wrong"
               onClick={this.onClick} 
