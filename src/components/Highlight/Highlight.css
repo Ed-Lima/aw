@@ -1,0 +1,15 @@
+.highlight {
+    background-color: rgba(255,0,0,.6);
+    color: #FFF;
+    padding: 0.2em 0.5em;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .sugestion{
+    display: none;
+  }
+  
+  .highlight:hover + .sugestion{
+    display: block;
+  }
