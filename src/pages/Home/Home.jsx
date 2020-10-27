@@ -19,7 +19,7 @@ class Login extends React.Component {
   setResult = (apiRes) => {
     let result = this.state.text
     apiRes[1].forEach(element => {
-      result = result.replaceAll(`${element[0]}`, `<span>${element[0]}</span>`)
+      result = result.replaceAll(`${element}`, `<span>${element}</span>`)
     });
     this.setState({result})
   }
