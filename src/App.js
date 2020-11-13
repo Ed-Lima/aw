@@ -7,12 +7,12 @@ import Text from './pages/Text/Text';
 
 function App() {
 
-  let a = process.env.PUBLIC_URL;
-  console.log(a)
+  let baseUrl = process.env.PUBLIC_URL;
+  
   return (
     <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/text" component={Text} exact />
+        <Route path={`${baseUrl}/`} component={Home} exact />
+        <Route path={`${baseUrl}/text`} component={Text} exact />
     </Switch>
   )
 }
