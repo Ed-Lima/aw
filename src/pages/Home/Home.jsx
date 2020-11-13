@@ -15,7 +15,9 @@ import bg from '../../assets/img/bg.svg'
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state={}
+    this.state={
+      baseUrl: process.env.PUBLIC_URL
+    }
   }
 
   render(){
@@ -42,7 +44,7 @@ class Home extends React.Component {
               <div className="headline">
                 <span className="title">Everyone can be a great writer</span>
                 <span className="subtitle">Compose bold, clear, mistake-free writing with our AI-powered writing assistant</span>
-                <button className="btn action" onClick={() => this.props.history.push('/text')}>Get Started</button>
+                <button className="btn action" onClick={() => this.props.history.push(`${this.state.baseUrl}/text`)}>Get Started</button>
               </div>
             </div>
             <div className="right">

@@ -12,6 +12,7 @@ class Text extends React.Component {
   constructor(props) {
     super(props);
     this.state={
+      baseUrl: process.env.PUBLIC_URL,
       text: '',
       loading: false,
       config: [],
@@ -68,7 +69,7 @@ class Text extends React.Component {
   render(){
     return (
       <div className="main">
-        <div className="title header"><img className="back" src={back} alt="" onClick={() => this.props.history.push('/')}/> Augmented Writing</div>
+        <div className="title header"><img className="back" src={back} alt="" onClick={() => this.props.history.push(this.state.baseUrl)}/> Augmented Writing</div>
         <div className="body">
 
           <div className="form">
