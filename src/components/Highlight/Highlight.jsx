@@ -1,4 +1,5 @@
 import React from 'react'
+import './Highlight.css'
 
 class Highlight extends React.Component {
   constructor(props) {
@@ -8,23 +9,25 @@ class Highlight extends React.Component {
     }
   }
 
-  handleMouseHover = () => {
+  handleClick = () => {
     this.setState({isHovering: !this.state.isHovering});
-  }
-
-  handleClick = (props) =>{
-    console.log('a');
   }
 
   render(){
     return(
       <>
-        <div className="highlight" onClick={() => this.handleClick()}>
-            <span className="sugestion">
-                {this.props.sugestion}
-            </span>
-            {this.props.text}
-        </div>
+        {
+          this.state.isHovering &&
+          <span className="sugestion">
+            {this.props.sugestion}
+          </span>
+        }
+        <span  className={'highlight '+this.props.color}
+              onMouseEnter={this.handleClick}
+              onMouseLeave={this.handleClick}>
+
+          {this.props.text}
+        </span>
       </>
     )
   }

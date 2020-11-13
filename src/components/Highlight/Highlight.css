@@ -1,15 +1,37 @@
 .highlight {
-    background-color: rgba(255,0,0,.6);
     color: #FFF;
     padding: 0.2em 0.5em;
     border-radius: 20px;
     cursor: pointer;
-  }
-  
-  .sugestion{
-    display: none;
-  }
-  
-  .highlight:hover + .sugestion{
-    display: block;
-  }
+}
+.red{
+  background-color: rgba(255,0,0,.6);
+}
+.yellow{
+  background-color: rgba(255, 152, 0, 0.7);
+}
+
+.sugestion {
+    position: absolute;
+    width: 150px;
+    background-color: #11A683;
+    /*border: 1px solid #eee;*/
+    color: #fff; /*#11A683;*/
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    transition: opacity 0.3s;
+    margin: -40px  0 -35px -20px;
+}
+
+.sugestion::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #11A683 transparent transparent transparent;
+}

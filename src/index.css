@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.title {
+  color: #2f2f2f;
+  font-family: 'Roboto Slab', Montserrat;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+.subtitle {
+  color: #222223;
+  font-family: Montserrat;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0 2rem 0;
+}
+
+#root{
+  background-color: #f9f9f9;
+}
