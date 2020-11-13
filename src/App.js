@@ -6,6 +6,9 @@ import Text from './pages/Text/Text';
 
 
 function App() {
+
+  let a = process.env.PUBLIC_URL;
+  console.log(a)
   return (
     <Switch>
         <Route path="/" component={Home} exact />
