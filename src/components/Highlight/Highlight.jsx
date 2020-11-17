@@ -17,10 +17,12 @@ class Highlight extends React.Component {
     return(
       <>
         {
-          this.state.isHovering &&
-          <span className="sugestion">
-            {this.props.sugestion}
-          </span>
+          (this.state.isHovering && this.props.sugestion) ?
+            <span className="sugestion">
+              {this.props.sugestion}
+            </span>
+          :
+          <></>
         }
         <span  className={'highlight '+this.props.color}
               onMouseEnter={this.handleClick}

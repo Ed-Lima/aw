@@ -30,11 +30,14 @@ class Text extends React.Component {
         fn: (key, result) => <Highlight key={key} text={result} sugestion={element[1]} color="red" />
       })
     });
+
     apiRes[10].forEach(element => {
-      config.push({
-        regex: RegExp(element, 'gim'),
-        fn: (key, result) => <Highlight key={key} text={result} sugestion="" color="yellow" />
-      })
+      if(element !== ' '){
+        config.push({
+          regex: RegExp(element, 'gim'),
+          fn: (key, result) => <Highlight key={key} text={result} sugestion="" color="yellow" />
+        })
+      }
     });
     this.setState({config})
 
