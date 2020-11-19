@@ -9,7 +9,13 @@ import check from '../../assets/img/check.svg'
 import facebook from '../../assets/img/facebook.svg'
 import instagram from '../../assets/img/instagram.svg'
 import twitter from '../../assets/img/twitter.svg'
+import geetika from '../../assets/img/geetika.png'
+import benedict from '../../assets/img/benedict.png'
 import edu from '../../assets/img/edu.png'
+import kerstin from '../../assets/img/kerstin.png'
+import ilene from '../../assets/img/ilene.png'
+import sheetal from '../../assets/img/sheetal.png'
+import karina from '../../assets/img/karina.png'
 import bg from '../../assets/img/bg.svg'
 
 class Home extends React.Component {
@@ -109,19 +115,19 @@ class Home extends React.Component {
 
           <div className="card">
             <div className="card-header">
-              <img src={edu} alt=""/>
+              <img src={geetika} alt=""/>
               <div className="card-info">
-                <span className="card-name">Eduardo Lima</span>
-                <span className="card-function">IT Analyst</span>
+                <span className="card-name">Geetika Ravela</span>
+                <span className="card-function">IT Manager</span>
               </div>
             </div>
           </div>
 
           <div className="card">
           <div className="card-header">
-            <img src={edu} alt=""/>
+            <img src={benedict} alt=""/>
             <div className="card-info">
-              <span className="card-name">Eduardo Lima</span>
+              <span className="card-name">Benedict Waiharo</span>
               <span className="card-function">IT Analyst</span>
             </div>
           </div>
@@ -139,33 +145,44 @@ class Home extends React.Component {
 
         <div className="card">
           <div className="card-header">
-            <img src={edu} alt=""/>
+            <img src={sheetal} alt=""/>
             <div className="card-info">
-              <span className="card-name">Eduardo Lima</span>
-              <span className="card-function">IT Analyst</span>
+              <span className="card-name">Sheetal Gaiki</span>
+              <span className="card-function">Senior Scientist</span>
             </div>
           </div>
         </div>
 
         <div className="card">
           <div className="card-header">
-            <img src={edu} alt=""/>
+            <img src={kerstin} alt=""/>
             <div className="card-info">
-              <span className="card-name">Eduardo Lima</span>
-              <span className="card-function">IT Analyst</span>
+              <span className="card-name">Kerstin Marion</span>
+              <span className="card-function">IT AS Manager</span>
             </div>
           </div>
         </div>
 
         <div className="card">
           <div className="card-header">
-            <img src={edu} alt=""/>
+            <img src={ilene} alt=""/>
             <div className="card-info">
-              <span className="card-name">Eduardo Lima</span>
-              <span className="card-function">IT Analyst</span>
+              <span className="card-name">Ilene Butka</span>
+              <span className="card-function">IT Manager</span>
             </div>
           </div>
         </div>
+
+        <div className="card">
+          <div className="card-header">
+            <img src={karina} alt=""/>
+            <div className="card-info">
+              <span className="card-name">Karina Gonçalves</span>
+              <span className="card-function">Software Developer</span>
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
 
@@ -206,11 +223,6 @@ class Home extends React.Component {
               <li>Contact us</li>
               <li>Privacy Policy</li>
               <li>Terms of Service</li>
-            </ul>
-            <ul>
-              <li className="bold">Earn Money</li>
-              <li>Affiliate</li>
-              <li>Become Partner</li>
             </ul>
           </div>
         </div>
